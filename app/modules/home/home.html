@@ -1,0 +1,136 @@
+
+ <div class="card" ng-repeat="x in myData  | orderBy:'name'" ng-cloak>
+ 
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" ng-src="{{x.image}}">
+    </div>
+    
+     <div>
+    <a ng-href="https://www.youtube.com/results?search_query={{ x.name }}" target="_blank" class="btn btn-default btn-xs btn-info">Temple Video</a>
+          <span class="divider"></span>
+
+
+  </div>
+
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{x.name}}<i class="material-icons right">more_vert</i></span>
+  <label>Click the image to Rank the temple! </label>
+    <select class="icons">
+      <option value=""  selected>Choose your option</option>
+      <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
+      <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
+      <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
+    </select>
+  
+  
+    </div>
+    <div class="card-reveal" >
+      <span class="card-title grey-text text-darken-4"><h2>{{x.name}}</h2><i class="material-icons right">close</i></span>
+      <p class="col s6 teal-text  text-darken-3" style="font-size:15px;">{{x.description}}</p>
+      <div class="col s6" md-rowspan="2" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+            <div class="row">
+        <label for="r1">john</label>
+      
+  <select class="browser-default" ng-model="x.johnRank" ng-change="myData.$save(x)">
+    <option value=""  selected>Rank here</option>
+    <option value="1"  >priority 1</option>
+    <option value="2"  >priority 2</option>
+    <option value="3"  >priority 3</option>
+  </select>
+
+      </div>
+  <div class="row">
+  <label for="r3">nancy</label>
+
+  <select class="browser-default" ng-model="x.nancyRank" ng-change="myData.$save(x)">
+    <option value=""  selected>Rank here</option>
+    <option value="1"  >priority 1</option>
+    <option value="2"  >priority 2</option>
+    <option value="3"  >priority 3</option>
+  </select>
+
+
+</div>
+
+<div class="row">
+  <label for="r4">Shaun</label>
+
+  <select class="browser-default" ng-model="x.shaunRank" ng-change="myData.$save(x)">
+    <option value=""  selected>Rank here</option>
+    <option value="1"  >priority 1</option>
+    <option value="2"  >priority 2</option>
+    <option value="3"  >priority 3</option>
+  </select>
+
+
+  </div>  
+<div class="row">
+  <label for="r2">charnette</label>
+  
+  <select class="browser-default" ng-model="x.charnetteRank" ng-change="myData.$save(x)">
+    <option value=""  selected>Rank here</option>
+    <option value="1"  >priority 1</option>
+    <option value="2"  >priority 2</option>
+    <option value="3"  >priority 3</option>
+  </select>
+  <div >
+  <form ng-submit="showmessage()">
+          <fieldset style="color:black">
+            <legend>
+               comments
+            </legend>
+            <div>
+              <label>
+                Address:
+                <input ng-model='x.address'  ng-change="myData.$save(x)" type='text'>
+              </label>
+            </div>
+            <div>
+              <label>
+                prefectured:
+                <textarea ng-model='x.prefectured'  ng-change="myData.$save(x)"></textarea>
+              </label>
+            </div>
+            <div>
+            <div ng-hide='true' ng-model='n'> added </div>
+             <!--  <input class='button' ng-click='myData.$add(x)' type='submit' value='Submit'> -->
+            </div>
+          </fieldset>
+        </form>
+
+
+
+</div>
+
+</div>
+
+  
+
+      
+      </div>
+   
+
+    <!--  <div class="row" style="border:3px;border-color:black;position:fixed;">
+     <span>JOHN Rank :{{x.johnRank}}</span>
+     <span>CHARNETTE Rank : {{x.charnetteRank}}</span>
+     <span>NANCY Rank : {{x.nancyRank}}</span>
+     <span>SHAUN Rank : {{x.shaunRank}}</span>
+   </div>
+     -->
+
+    </div>
+     <div class="row">
+
+<p style="text-align:center;border:2px;padding:12px;"><span> -</span>     John <span style="color:red;">{{x.johnRank}} </span>
+                Charnette <span style="color:red;">{{x.charnetteRank}} </span>
+               Nancy  <span style="color:red;">{{x.nancyRank}} </span>
+                Shaun <span style="color:red;">{{x.shaunRank}} </span>
+
+
+
+                 </p>
+</div>
+
+  </div>
+ 
+

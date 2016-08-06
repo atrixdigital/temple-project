@@ -1,0 +1,37 @@
+{
+  "temples": [
+    {
+  "name": "test temple",
+    "description": "20000",
+   "image": "Saddar, rizwan Arcade ",
+   "nancyRank":"",
+   "shaunRank":"",
+   "charnetteRank":"",
+   "johnRank":""
+},  {
+  "name": "AngularJS developer",
+    "description": "20000",
+   "image": "Saddar, rizwan Arcade ",
+     "nancyRank":"",
+   "shaunRank":"",
+   "charnetteRank":"",
+   "johnRank":""
+},  {
+  "name": "AngularJS developer",
+    "description": "20000",
+   "image": "Saddar, rizwan Arcade ",
+     "nancyRank":"",
+   "shaunRank":"",
+   "charnetteRank":"",
+   "johnRank":""
+},  {
+  "name": "AngularJS developer",
+    "description": "20000",
+   "image": "Saddar, rizwan Arcade ",
+     "nancyRank":"",
+   "shaunRank":"",
+   "charnetteRank":"",
+   "johnRank":""
+}
+  ]
+}

@@ -1,0 +1,43 @@
+<a class="btn" ng-click="saveJSON()" ng-href="{{ url }}">Export to JSON</a>
+
+
+ <button class="btn btn-default"
+              ng-csv="arr" filename="temples.csv" field-separator="," decimal-separator="."
+              >Export to CSV</button>
+
+
+<br><br>
+<label>search</label>
+<input ng-model="searchme"  label="search" ng-cloak> 
+
+<table class="striped" >
+        <thead>
+        <button ng-click="orderByMultiple('johnRank','charnetteRank','nancyRank','shaunRank')"> Priority Rank button</button>
+        <button ng-click="orderByMultiple()">Reset priority</button>
+          <tr>
+
+              <th ng-click="orderByMe('name')">Temple Name <i class="fa fa-android"></i></th>
+              <th ng-click="orderByMe('johnRank')">john Rank</th>
+              <th ng-click="orderByMe('charnetteRank')">Charnette Rank</th>
+              <th ng-click="orderByMe('nancyRank')"> nancy rank </th>
+              <th ng-click="orderByMe('shaunRank')"> Shaun rank </th>
+              <th ng-click="orderByMe('address')">Address</th>
+              <th ng-click="orderByMe('prefectured')">prefectured</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="a in myData |  orderBy:myOrderM | filter:searchme">
+            <td>{{a.name }}</td>
+            <td>{{a.johnRank}}</td>
+            <td>{{a.charnetteRank}}</td>
+            <td>{{a.nancyRank}}</td>
+            <td>{{a.shaunRank}}</td>
+            <td>{{a.address}} </td>
+            <td>{{a.prefectured}} </td>
+          </tr>
+        </tbody>
+ </table>
+
+
+ 

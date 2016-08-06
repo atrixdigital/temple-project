@@ -1,0 +1,104 @@
+
+<label> search </label><input type="text" ng-model="searchme">
+<div ng-repeat="record in myData | filter:searchme" ng-cloak>
+
+<div class="row"> 
+
+<div class="input-field col s6">
+  <label>Name</label>
+
+  <input id="icon_prefix" type="text" class="validate"  ng-model="record.name" ng-change="myData.$save(record)">
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="row"> 
+
+<div class="input-field col s6">
+
+  <input id="icon_prefix" type="text" class="validate" ng-model="record.description" ng-change="myData.$save(record)">
+
+  <label for="icon_prefix"> Description</label>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="row"> 
+
+<div class="input-field col s6">
+<input se
+  <input id="icon_prefix" type="text" class="validate" ng-model="record.image" ng-change="myData.$save(record)">
+
+  <label for="icon_prefix"> {{imagelink}}</label>
+
+</div>
+
+       <button  ng-click="myData.$remove(record)">Delete Record </button>
+
+
+</div>
+
+<hr>
+
+</div>
+
+
+
+
+
+
+
+<!-- <div  ng-repeat="record in myData"> 
+
+   <div class="input-field col s12">
+
+    <input type="textarea" ng-model="record.name" ng-change="myData.$save(record)"/>
+
+   </div> <div class="input-field col s6">
+
+    <input type="textarea" ng-model="record.description" ng-change="myData.$save(record)"/>
+
+   </div> <div class="input-field col s6">
+
+    <input type="textarea" ng-model="record.image" ng-change="myData.$save(record)"/>
+
+   </div>
+
+       <md-button class="md-raised"  ng-click="myData.$remove(record)">Delete Record </md-button>
+
+
+
+</div> -->
+
+   <!--  <div class="input-field col s6">
+
+    <input type="textarea" ng-model="record.tags" ng-change="myData.$save(record)"/>
+
+    <label for="icon_prefix">First Name</label>
+
+   </div>
+
+ -->
+
+
+
+
+
+ <form ng-submit="addData()">
+
+    <input type="textarea" ng-model="newMessageText" />
+
+     <button type="submit">Add new product</button> 
+
+    </form>  

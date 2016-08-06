@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" href="content/img/favicon/favicon.ico" type="image/ico"/ >
+    <title>The Japan Temples </title>
+     <!-- CSS framework - materialize CSS  -->
+     <link rel="stylesheet" type="text/css" href="content/css/materialize.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- my custom CSS -->
+     <link rel="stylesheet" type="text/css" href="content/css/style.css">
+     <script src="content/js/jquery.min.js"></script>
+     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<style>
+ html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+        
+    /* The starting CSS styles for the enter animation */
+ .fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+</style>
+
+
+	<body ng-app="myApp" style=" margin: 0 auto;"> <!-- main myApp - app.js -->
+               <div class="row">
+               <div class="col s2">
+                <div ng-include="'app/modules/core/sidebar.html'"></div>
+                 </div>
+                <div class="col s10 ">
+				<div ng-include="'app/modules/core/header.html'"  ></div> 
+				 <div class="container"> 
+						  <main ng-view class="fade"></main>
+					  </div>
+				</div>
+				</div>
+
+				
+					 
+	           <div ng-include="'app/modules/core/footer.html'"></div>
+
+    <!-- ng dependencies -->
+    <script src="app/lib/bower_components/angular/angular.js"></script>
+    <script src="app/lib/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="app/lib/angular-route.min.js"> </script>
+    <script src="app/lib/ng-csv.js"> </script>
+    <script src="app/lib/angular-sanitize.min.js"> </script> 
+
+    <!-- app.js files -->
+    <script src="app/app.js">  </script>
+    <script src="app/routes.js"></script>
+    <script src="app/modules/home/homeController.js"></script>
+    <script src="app/modules/home/adminController.js"></script>
+    <script src="app/modules/home/rankingController.js"></script>
+
+    <!-- Other scripts -->
+    <script src="content/js/jquery.js"></script>
+    <script src="content/js/materialize.min.js"></script>
+  
+    <!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+
+</body>
+</html>
